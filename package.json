@@ -1,0 +1,44 @@
+{
+  "name": "my-run",
+  "version": "1.0.0",
+  "description": "can save yourself shell",
+  "main": "./lib/index.js",
+  "bin": {
+    "my-run": "lib/index.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "rm -rf lib && rm -rf es && tsc --build",
+    "docs": "typedoc src/index.ts",
+    "release": "npm run build && npm run docs && npm publish"
+  },
+  "files": [
+    "lib",
+    "dist"
+  ],
+  "keywords": [
+    "shell",
+    "save"
+  ],
+  "author": "zml",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "child-process": "^1.0.2",
+    "commander": "^11.1.0",
+    "module-alias": "^2.2.3",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.6",
+    "typescript": "^4.9.5"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@": "lib"
+  },
+  "repository": {
+    "url": "https://github.com/forget-forever/my-run.git",
+    "type": "git"
+  }
+}

@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "jest",
+    "dev": "ts-node ./src/index",
     "build": "rm -rf lib && rm -rf es && tsc --build",
     "docs": "typedoc src/index.ts",
     "release": "npm run build && npm run docs && npm publish"

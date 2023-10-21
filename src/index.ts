@@ -9,18 +9,13 @@ program.version(require("@root/package.json").version, '-v --version').usage('<c
 
 program.command('run [name]').description('run loading....').action((name) => {
   
-})
+});
 
-program.command('create')
-  .option('-c [configFile]')
-  .option('-t [type]')
-  .option('-d [debug]')
-  .action((option = {}) => {
-    // const params = getParams()
-    // info(`配置文件： ${chalk.green(resolve(process.cwd(), params.configFile))}`)
-    // info(`获取 ${chalk.green(params.type || '全部')} 类型/集合的接口`)
-    // info(``)
-    // create()
+program.command('add [str]')
+  .option('-dir')
+  .action((str, option) => {
+    console.log('aaa')
+    console.log({str, option})
   })
 
 program.parse(process.argv);

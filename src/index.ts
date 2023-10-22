@@ -11,11 +11,15 @@ program.command('run [name]').description('run loading....').action((name) => {
   
 });
 
-program.command('add [str]')
-  .option('-dir')
-  .action((str, option) => {
-    console.log('aaa')
-    console.log({str, option})
-  })
+program.command('addStr [str] [name]').action((str, name) => {
+  
+})
+
+// program.command('add [str]')
+//   .option('-dir')
+//   .action((str, option) => {
+//     console.log('aaa')
+//     console.log({str, option})
+//   })
 
 program.parse(process.argv);
